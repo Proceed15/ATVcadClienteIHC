@@ -20,6 +20,24 @@ namespace ATVcadCliente.Models
         public string Endereco { get; set; }
         [Required]
         [StringLength(100)]
+        public string CEP { get; set; }
+        [Required]
+        [StringLength(100)]
+        public string UF { get; set; }
+        [Required]
+        [StringLength(100)]
+        public string cidade { get; set; }
+        [Required]
+        [StringLength(100)]
+        public string bairro { get; set; }
+        [Required]
+        [StringLength(100)]
+        public string logradouro { get; set; }
+        [Required]
+        [StringLength(100)]
+        public string complemento { get; set; }
+        [Required]
+        [StringLength(100)]
         public string EstCivil { get; set; }
         [Required]
         [StringLength(100)]

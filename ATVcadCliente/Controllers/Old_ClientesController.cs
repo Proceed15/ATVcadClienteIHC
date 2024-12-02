@@ -10,11 +10,11 @@ using ATVcadCliente.Models;
 
 namespace ATVcadCliente.Controllers
 {
-    public class ClientesController : Controller
+    public class Old_ClientesController : Controller
     {
         private readonly ATVcadClienteContext _context;
 
-        public ClientesController(ATVcadClienteContext context)
+        public Old_ClientesController(ATVcadClienteContext context)
         {
             _context = context;
         }
@@ -54,7 +54,7 @@ namespace ATVcadCliente.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,CPF,RG,Endereco,CEP,UF,cidade,bairro,logradouro,complemento,EstCivil,DataNasc,Pai,Mae")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("Id,Nome")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace ATVcadCliente.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,CPF,RG,Endereco,CEP,UF,cidade,bairro,logradouro,complemento,EstCivil,DataNasc,Pai,Mae")] Cliente cliente)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome")] Cliente cliente)
         {
             if (id != cliente.Id)
             {
